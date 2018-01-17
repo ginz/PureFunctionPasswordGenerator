@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="ws.ginzburg.tools.password.MainActivity">
+
+    <TextView
+            android:text="Input prefix (constant password)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/inputPrefixTextView"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:layout_below="@+id/inputPrefixTextView" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:id="@+id/prefixEditText"/>
+    <TextView
+            android:text="Secret code (constant)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/secretTextView"
+            android:layout_below="@+id/prefixEditText" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/simplifiedEditText"
+            android:enabled="false"
+            android:layout_below="@+id/serviceNameEditText" android:layout_toRightOf="@+id/simplifiedTextView"
+            android:layout_toEndOf="@+id/simplifiedTextView"/>
+    <TextView
+            android:text="Input suffix length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputSuffixLengthTextView" android:layout_below="@+id/secretEditText"
+            android:layout_alignLeft="@+id/secretTextView" android:layout_alignStart="@+id/secretTextView"
+            android:layout_marginTop="20dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/suffixLengthEditText"
+            android:text="3" android:layout_below="@+id/inputSuffixLengthTextView"
+            android:layout_alignLeft="@+id/inputSuffixLengthTextView"
+            android:layout_alignStart="@+id/inputSuffixLengthTextView"/>
+    <TextView
+            android:text="Input service name or site domain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/serviceNameTextView"
+            android:layout_below="@+id/suffixLengthEditText" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/serviceNameEditText"
+            android:inputType="textUri"
+            android:layout_below="@+id/serviceNameTextView" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <TextView
+            android:text="It will be simplified as"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/simplifiedTextView"
+            android:layout_alignBaseline="@+id/simplifiedEditText" android:layout_alignBottom="@+id/simplifiedEditText"
+            android:layout_alignParentLeft="true" android:layout_alignParentStart="true"/>
+    <Button
+            android:text="Generate password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/generateButton"
+            android:layout_below="@+id/simplifiedEditText" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/passwordEditText" android:inputType="none"
+            android:textIsSelectable="true"
+            android:layout_below="@+id/passwordTextView" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <TextView
+            android:text="Generated password:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordTextView"
+            android:layout_below="@+id/generateButton" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/secretEditText"
+            android:layout_below="@+id/secretTextView" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+</RelativeLayout>
